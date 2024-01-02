@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 public class ImageToPDF {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ImageToPDF.class);
-  private static final String SRC = "pdfs/image.png";
-  private static final String DEST = "pdfs/image.pdf";
+  private static final String SRC = "pdfs/imagetopdf/image.png";
+  private static final String DEST = "pdfs/imagetopdf/image.pdf";
 
   public static void main(String[] args) {
 
