@@ -27,8 +27,8 @@ public class CreateNonBlankPDF {
       try (PDPageContentStream contents = new PDPageContentStream(doc, page)) {
         contents.beginText();
         PDFont font = new PDType1Font(FontName.HELVETICA);
-        contents.setFont(font, 10);
-        contents.newLineAtOffset(100, 600);
+        contents.setFont(font, 20);
+        contents.newLineAtOffset(200, 750);
         contents.showText(TEXT);
         contents.endText();
       }
