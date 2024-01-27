@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public class AddSignatureField {
   private static final Logger LOG = LoggerFactory.getLogger(AddSignatureField.class);
 
-  public static final String OUT_FILE = "pdfs/test.pdf";
+  public static final String OUT_FILE = "pdfs/addsignaturefield/test.pdf";
 
   public static void main(String[] args) {
     try (PDDocument document = new PDDocument()) {
