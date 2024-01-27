@@ -26,10 +26,8 @@ public class SignDocument extends CreateSignatureBase {
 
   public static final String SRC = "pdfs/signdocument/test.pdf";
   public static final String DEST = "pdfs/signdocument/test_signed.pdf";
-
   public static final String KEYSTORE = "keystore.p12";
   public static final String KEYSTORE_PASSWORD = "password";
-
 
   public SignDocument(KeyStore keystore, char[] pin) throws KeyStoreException,
       UnrecoverableKeyException, NoSuchAlgorithmException, IOException, CertificateException {
@@ -37,7 +35,6 @@ public class SignDocument extends CreateSignatureBase {
   }
 
   public static void main(String[] args) {
-
     try (InputStream is = SignDocument.class.getResourceAsStream("/" + KEYSTORE);
         PDDocument document = Loader.loadPDF(new File(SRC))) {
       char[] password = KEYSTORE_PASSWORD.toCharArray();
@@ -53,9 +50,7 @@ public class SignDocument extends CreateSignatureBase {
         | UnrecoverableKeyException e) {
       LOG.error("Exception while signing a documment", e);
     }
-
   }
-
 
   public void signDetached(PDDocument document, OutputStream output) throws IOException {
     int accessPermissions = SigUtils.getMDPPermission(document);
@@ -84,6 +79,5 @@ public class SignDocument extends CreateSignatureBase {
 
     document.saveIncremental(output);
   }
-
 
 }
